@@ -1,0 +1,335 @@
+{
+    "carousels": [
+        {
+            "itemsPerSlide": 1,
+            "autoPlay": true,
+            "indicators": true,
+            "navButtonsVisible": true,
+            "animation": "fade",
+            "duration": 500,
+            "interval": 90000,
+            "data": [
+                {
+                    "type": "text",
+                    "title": "Prdko je tu zakliaty v prdelke",
+                    "subtitle": "POdtitul pdrka zakliateho v prdelke zarastenej",
+                    "button": "Pod sem",
+                    "bgImage": "https://picsum.photos/500/200",
+                    "bgColor": "#cc0000cc",
+                    "cta": "http://www.starcheck.sk"
+                },
+                {
+                    "type": "text",
+                    "title": "Title",
+                    "subtitle": "SubTitle",
+                    "button": "Visit",
+                    "bgImage": "https://picsum.photos/500/200",
+                    "bgColor": "#cccc00aa",
+                    "cta": "http://www.starcheck.sk"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                }
+            ]
+        },
+        {
+            "itemsPerSlide": 2,
+            "autoPlay": true,
+            "indicators": true,
+            "navButtonsVisible": true,
+            "animation": "slide",
+            "duration": 600,
+            "interval": 1121000,
+            "data": [
+                
+                {
+                    "type": "text",
+                    "title": "Title 2",
+                    "subtitle": "SubTitle wer ",
+                    "button": "Visit",
+                    "bgImage": "https://picsum.photos/500/200",
+                    "bgColor": "#ff5511",
+                    "cta": "http://www.starcheck.sk"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "Alternative text je prilis dlhy na zobrazenie"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/500/200",
+                    "imageDesktop": "https://picsum.photos/1000/400",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                }
+            ]
+        },
+        {
+            "itemsPerSlide": 4,
+            "autoPlay": true,
+            "indicators": true,
+            "navButtonsVisible": false,
+            "animation": "slide",
+            "duration": 600,
+            "interval": 7000,
+            "data": [
+                {
+                    "type": "text",
+                    "title": "Title",
+                    "subtitle": "",
+                    "button": "Visit",
+                    "bgImage": "https://picsum.photos/150/100",
+                    "bgColor": "#009a6888",
+                    "cta": "http://www.starcheck.sk"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/150/100",
+                    "imageDesktop": "https://picsum.photos/300/200",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "text",
+                    "title": "Title",
+                    "subtitle": "SubTitle",
+                    "button": "Visit",
+                    "bgImage": "https://picsum.photos/150/100",
+                    "bgColor": "#cc0000",
+                    "cta": "http://www.starcheck.sk"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/150/100",
+                    "imageDesktop": "https://picsum.photos/300/200",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/150/100",
+                    "imageDesktop": "https://picsum.photos/300/200",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/150/100",
+                    "imageDesktop": "https://picsum.photos/300/200",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/150/100",
+                    "imageDesktop": "https://picsum.photos/300/200",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/150/100",
+                    "imageDesktop": "https://picsum.photos/300/200",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/150/100",
+                    "imageDesktop": "https://picsum.photos/300/200",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/150/100",
+                    "imageDesktop": "https://picsum.photos/300/200",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/150/100",
+                    "imageDesktop": "https://picsum.photos/300/200",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/150/100",
+                    "imageDesktop": "https://picsum.photos/300/200",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/150/100",
+                    "imageDesktop": "https://picsum.photos/300/200",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/150/100",
+                    "imageDesktop": "https://picsum.photos/300/200",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                },
+                {
+                    "type": "image",
+                    "imageMobile": "https://picsum.photos/150/100",
+                    "imageDesktop": "https://picsum.photos/300/200",
+                    "cta": "http://www.starcheck.sk",
+                    "alt": "ALT"
+                }
+            ]
+        }
+    ]
+}
