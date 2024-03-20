@@ -1,5 +1,5 @@
 import { Alert, AlertTitle, Grid, LinearProgress, Typography } from "@mui/material";
-import { IAppInputData, ICarouselsData } from "./types";
+import { IAppData, IAppInputData, ICarouselsData } from "./types";
 import { Fragment, useEffect, useState } from "react";
 import { createPortal } from 'react-dom';
 import useGetFromAPI from "./hooks/useGetFromAPI";
@@ -7,13 +7,13 @@ import App from "./App";
 
 interface IAppImagesLoaderProps {
   inputData: IAppInputData;
-
+  appData: IAppData;
 }
 
-export default function AppDataLoader({ inputData }: IAppImagesLoaderProps) {
+export default function AppDataLoader({ inputData, appData }: IAppImagesLoaderProps) {
 
-  // const { error, data, isLoading } = useGetFromAPI<ICarouselsData>(appData.dataURL);
-  const { error, data, isLoading } = useGetFromAPI<ICarouselsData>("careouselData.json");
+  const { error, data, isLoading } = useGetFromAPI<ICarouselsData>(appData.dataURL);
+  //const { error, data, isLoading } = useGetFromAPI<ICarouselsData>("careouselData.json");
 
   const [proceed, setProceed] = useState<boolean>(false);
 

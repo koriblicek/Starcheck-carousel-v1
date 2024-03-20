@@ -27,7 +27,7 @@ export default function AppSettingsLoader({ inputData }: IAppProps) {
 
   return (
     <Fragment>
-      {proceed && <AppDataLoader inputData={inputData} />}
+      {proceed && data && <AppDataLoader inputData={inputData} appData={data} />}
       {isLoading &&
         <Grid container p={1}>
           <Grid item xs textAlign='center'>
