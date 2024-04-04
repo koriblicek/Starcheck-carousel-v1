@@ -1,6 +1,6 @@
 import { Box, Button, CardHeader, CardMedia, Grid, darken } from '@mui/material';
 import { useState } from 'react';
-import { ICarouselTextItem } from 'src/types';
+import { ConstTargetTypes, ICarouselTextItem } from 'src/types';
 
 interface ISlideItemProps {
     slide: ICarouselTextItem;
@@ -14,6 +14,7 @@ export default function SlideItemText({ slide, itemsPerSlide }: ISlideItemProps)
     const [random] = useState((Math.random() * 10000).toFixed(0));
 
     const isCta = (slide.cta !== "" && slide.cta !== undefined && slide.cta !== null);
+    const isTarget = ConstTargetTypes.includes(slide.target);
 
     return (
         <Grid
@@ -40,7 +41,12 @@ export default function SlideItemText({ slide, itemsPerSlide }: ISlideItemProps)
                 onPointerEnter={() => setHovered(true)}
                 onPointerLeave={() => setHovered(false)}
                 onClick={() => {
-                    isCta && window.open(slide.cta, "_blank");
+                    if (isCta) {
+                        if (isTarget)
+                            window.open(slide.cta, slide.target);
+                        else
+                            window.open(slide.cta);
+                    }
                 }}
             >
                 <CardHeader

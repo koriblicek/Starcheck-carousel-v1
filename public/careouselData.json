@@ -16,7 +16,8 @@
                     "button": "Pod sem",
                     "bgImage": "https://picsum.photos/500/200",
                     "bgColor": "#cc0000cc",
-                    "cta": "http://www.starcheck.sk"
+                    "cta": "http://www.starcheck.sk",
+                    "target": "_blank"
                 },
                 {
                     "type": "text",
@@ -25,7 +26,8 @@
                     "button": "Visit",
                     "bgImage": "https://picsum.photos/500/200",
                     "bgColor": "#cccc00aa",
-                    "cta": "http://www.starcheck.sk"
+                    "cta": "http://www.starcheck.sk",
+                    "target": "_self"
                 },
                 {
                     "type": "image",
@@ -115,7 +117,6 @@
             "duration": 600,
             "interval": 1121000,
             "data": [
-                
                 {
                     "type": "text",
                     "title": "Title 2",

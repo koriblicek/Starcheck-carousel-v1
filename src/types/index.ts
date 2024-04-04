@@ -54,9 +54,11 @@ export interface ICarouselTextItem extends ICarouselItem {
     bgColor: string;
 }
 
-export enum EnumCarousalItemTypes { image = "image", text = "text" };
+export enum EnumCarouselItemTypes { image = "image", text = "text" };
+export const ConstTargetTypes = ["_self", "_blank", "_parent", "_top", "_unfencedTop"];
 
 export interface ICarouselItem {
-    type: EnumCarousalItemTypes;
+    type: EnumCarouselItemTypes;
     cta: string;
+    target: string;
 }
