@@ -34,7 +34,7 @@ export default function SlideItemImage({ slide, itemsPerSlide, isMobile }: ISlid
                         if (isTarget)
                             window.open(slide.cta, slide.target);
                         else
-                            window.open(slide.cta);
+                            window.open(slide.cta, "_self");
                     }
                 }}
                 onPointerEnter={() => setHovered(true)}

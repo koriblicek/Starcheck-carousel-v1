@@ -45,7 +45,7 @@ export default function SlideItemText({ slide, itemsPerSlide }: ISlideItemProps)
                         if (isTarget)
                             window.open(slide.cta, slide.target);
                         else
-                            window.open(slide.cta);
+                            window.open(slide.cta, "_self");
                     }
                 }}
             >
