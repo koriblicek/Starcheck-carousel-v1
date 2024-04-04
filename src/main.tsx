@@ -15,7 +15,6 @@ function getCurrentScript() {
     return document.getElementById("local-test");
   else
     return document.currentScript;
-
 }
 const currentScript = getCurrentScript();
 
