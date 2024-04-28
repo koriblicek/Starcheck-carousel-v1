@@ -7,7 +7,7 @@
             "navButtonsVisible": true,
             "animation": "fade",
             "duration": 500,
-            "interval": 90000,
+            "interval": 9000,
             "data": [
                 {
                     "type": "text",
@@ -35,6 +35,16 @@
                     "imageDesktop": "https://picsum.photos/1000/400",
                     "cta": "http://www.starcheck.sk",
                     "alt": "ALT"
+                },
+                {
+                    "type": "text",
+                    "title": "Title",
+                    "subtitle": "SubTitle",
+                    "button": "Visit",
+                    "bgImage": "https://picsum.photos/500/200",
+                    "bgColor": "#cccc00aa",
+                    "cta": "http://www.starcheck.sk",
+                    "target": "_self"
                 },
                 {
                     "type": "image",
@@ -115,7 +125,7 @@
             "navButtonsVisible": true,
             "animation": "slide",
             "duration": 600,
-            "interval": 1121000,
+            "interval": 1000,
             "data": [
                 {
                     "type": "text",
@@ -132,6 +142,15 @@
                     "imageDesktop": "https://picsum.photos/1000/400",
                     "cta": "http://www.starcheck.sk",
                     "alt": "Alternative text je prilis dlhy na zobrazenie"
+                },
+                {
+                    "type": "text",
+                    "title": "Title 2",
+                    "subtitle": "SubTitle wer ",
+                    "button": "Visit",
+                    "bgImage": "https://picsum.photos/500/200",
+                    "bgColor": "#ff5511",
+                    "cta": "http://www.starcheck.sk"
                 },
                 {
                     "type": "image",

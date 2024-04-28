@@ -38,7 +38,7 @@ export interface ICarousel {
     duration: number;
     interval: number;
     data: ICarouselItem[];
-};
+}
 
 export interface ICarouselImageItem extends ICarouselItem {
     imageMobile: string;
@@ -54,7 +54,10 @@ export interface ICarouselTextItem extends ICarouselItem {
     bgColor: string;
 }
 
-export enum EnumCarouselItemTypes { image = "image", text = "text" };
+export enum EnumCarouselItemTypes {
+    image = "image",
+    text = "text"
+}
 export const ConstTargetTypes = ["_self", "_blank", "_parent", "_top", "_unfencedTop"];
 
 export interface ICarouselItem {

@@ -1,17 +1,21 @@
 import { useMediaQuery, useTheme } from "@mui/material";
 import { Slide } from "./components/slide";
 import { ICarousel } from "./types";
-import { splitArray } from "./utils";
 import { useMemo, useRef, useState } from "react";
-import Carousel from "react-material-ui-carousel";
 import useResizeObserver from "@react-hook/resize-observer";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Carousel } from 'nuka-carousel';
+import { splitArray } from "./utils";
 
 interface IAppProps {
   carouselData: ICarousel;
   index: number;
 }
 
-export default function App({ carouselData }: IAppProps) {
+
+
+export default function AppNukeCarousel({ carouselData }: IAppProps) {
 
   const theme = useTheme();
   const md = useMediaQuery(theme.breakpoints.down("md"));
@@ -33,20 +37,10 @@ export default function App({ carouselData }: IAppProps) {
   });
 
   return (
-    <div ref={ref}>
-      <Carousel
-        stopAutoPlayOnHover={true}
-        cycleNavigation={true}
-        swipe={false}
-        autoPlay={carouselData.autoPlay}
-        indicators={carouselData.indicators}
-        navButtonsAlwaysVisible={carouselData.navButtonsVisible}
-        animation={carouselData.animation}
-        duration={carouselData.duration}
-        interval={carouselData.interval}
-      >
+    <div ref={ref} className="slider-container">
+      <Carousel showArrows={carouselData.navButtonsVisible} showDots={carouselData.indicators} autoplay={carouselData.autoPlay} autoplayInterval={carouselData.interval}>
         {slides}
-      </Carousel >
+      </Carousel>
     </div>
   );
 }

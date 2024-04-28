@@ -5,13 +5,12 @@ import { ConstTargetTypes, ICarouselTextItem } from 'src/types';
 interface ISlideItemProps {
     slide: ICarouselTextItem;
     itemsPerSlide: number;
+    height: number;
 }
 
-export default function SlideItemText({ slide, itemsPerSlide }: ISlideItemProps) {
+export default function SlideItemText({ slide, itemsPerSlide, height }: ISlideItemProps) {
 
     const [hovered, setHovered] = useState<boolean>(false);
-
-    const [random] = useState((Math.random() * 10000).toFixed(0));
 
     const isCta = (slide.cta !== "" && slide.cta !== undefined && slide.cta !== null);
     const isTarget = ConstTargetTypes.includes(slide.target);
@@ -24,7 +23,7 @@ export default function SlideItemText({ slide, itemsPerSlide }: ISlideItemProps)
         >
             <CardMedia
                 component='img'
-                src={slide.bgImage + "?random=" + random}
+                src={slide.bgImage}
                 sx={{ display: 'block', width: '100%' }}
             />
             <Box
@@ -50,16 +49,18 @@ export default function SlideItemText({ slide, itemsPerSlide }: ISlideItemProps)
                 }}
             >
                 <CardHeader
-                    title={slide.title}
+                    title={slide.title ? slide.title : " "}
                     titleTypographyProps={{
-                        fontSize: `calc(3vw / ${Math.sin((Math.PI / 2) * itemsPerSlide / 4)})`,
+                        fontSize: `calc(${height * 0.20}px)`,
+                        textAlign: 'center',
                         textOverflow: 'ellipsis',
                         overflow: 'hidden',
                         whiteSpace: 'nowrap'
                     }}
-                    subheader={slide.subtitle}
+                    subheader={slide.subtitle ? slide.subtitle : " "}
                     subheaderTypographyProps={{
-                        fontSize: `calc(1.8vw / ${Math.sin((Math.PI / 2) * itemsPerSlide / 4)})`,
+                        fontSize: `calc(${height * 0.12}px)`,
+                        textAlign: 'center',
                         textOverflow: 'ellipsis',
                         overflow: 'hidden',
                         whiteSpace: 'nowrap',
@@ -68,7 +69,7 @@ export default function SlideItemText({ slide, itemsPerSlide }: ISlideItemProps)
                     sx={{
                         color: 'white',
                         display: 'block',
-                        p: `calc(3vw / ${itemsPerSlide})`,
+                        p: `calc(${height * .05}px)`,
 
                     }}
                 />
@@ -76,16 +77,19 @@ export default function SlideItemText({ slide, itemsPerSlide }: ISlideItemProps)
                     variant="outlined"
                     sx={{
                         // textAlign:'center',
+                        position: 'absolute',
                         left: '50%',
+                        bottom: `calc(${height * .05}px)`,
                         transform: `translate(-50%)`,
                         color: 'white',
-                        border: `calc(2px / ${Math.sin((Math.PI / 2) * itemsPerSlide / 4)}) solid white`,
+                        border: `calc(${height * .015}px) solid white`,
+                        py: `1px`,
                         '&:hover': {
-                            border: `calc(2px / ${Math.sin((Math.PI / 2) * itemsPerSlide / 4)}) solid white`,
+                            border: `calc(${height * .015}px) solid white`,
                             backgroundColor: '#eeeeee',
                             color: 'black'
                         },
-                        fontSize: `calc(1vw / ${Math.sin((Math.PI / 2) * itemsPerSlide / 4)})`
+                        fontSize: `calc(${height * 0.08}px)`
                     }}
                 >
                     {slide.button}

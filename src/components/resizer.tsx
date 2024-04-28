@@ -15,7 +15,11 @@ export function Resizer({ onResize }: IResizerProps) {
         // Remove event listener on cleanup
         return () => window.removeEventListener("resize", handleResize);
 
-    }, []);
+    }, [onResize]);
 
+    useEffect(() => {
+        onResize(Date.now());
+    }, [onResize]);
+    
     return null;
 }

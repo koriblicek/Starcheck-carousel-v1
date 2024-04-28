@@ -6,13 +6,12 @@ interface ISlideItemProps {
     slide: ICarouselImageItem;
     isMobile: boolean;
     itemsPerSlide: number;
+    height: number;
 }
 
-export default function SlideItemImage({ slide, itemsPerSlide, isMobile }: ISlideItemProps) {
+export default function SlideItemImage({ slide, itemsPerSlide, isMobile, height }: ISlideItemProps) {
 
     const [hovered, setHovered] = useState<boolean>(false);
-
-    const [random] = useState((Math.random() * 10000).toFixed(0));
 
     const isAlt = (slide.alt !== "" && slide.alt !== undefined && slide.alt !== null);
     const isCta = (slide.cta !== "" && slide.cta !== undefined && slide.cta !== null);
@@ -26,7 +25,7 @@ export default function SlideItemImage({ slide, itemsPerSlide, isMobile }: ISlid
         >
             <CardMedia
                 component='img'
-                src={(isMobile ? slide.imageMobile : slide.imageDesktop) + "?random=" + random}
+                src={(isMobile ? slide.imageMobile : slide.imageDesktop)}
                 sx={{ display: 'block', width: '100%', transition: 'filter .2s', filter: `brightness(${hovered ? 1.3 : 1})`, cursor: isCta ? 'pointer' : 'auto' }}
                 title={slide.alt}
                 onClick={() => {
@@ -48,12 +47,12 @@ export default function SlideItemImage({ slide, itemsPerSlide, isMobile }: ISlid
                 >
                     <Typography
                         sx={{
-                            fontSize: `calc(2vw / ${Math.sin((Math.PI / 2) * itemsPerSlide / 4)})`,
+                            fontSize: `calc(${height * 0.1}px)`,
                             textOverflow: 'ellipsis',
                             overflow: 'hidden',
                             userSelect: "none",
                             px: 1,
-                            py: hovered ? `calc(1vw / ${Math.sin((Math.PI / 2) * itemsPerSlide / 4)})` : 0,
+                            py: hovered ? `calc(${height * 0.05}px)` : 0,
                             whiteSpace: 'nowrap',
                             transition: 'padding .1s'
                         }}

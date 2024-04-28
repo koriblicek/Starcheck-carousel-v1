@@ -1,8 +1,8 @@
 import { Alert, AlertTitle, Grid, LinearProgress, Typography } from "@mui/material";
 import { IAppData, IAppInputData } from "./types";
 import { Fragment, useEffect, useState } from "react";
-import useGetFromAPI from "./hooks/useGetFromAPI";
 import AppDataLoader from "./AppDataLoader";
+import useAxiosFunction from "./hooks/useAxiosFunction";
 
 
 interface IAppProps {
@@ -11,24 +11,28 @@ interface IAppProps {
 
 export default function AppSettingsLoader({ inputData }: IAppProps) {
 
-  const { error, data, isLoading } = useGetFromAPI<IAppData>(inputData.dataApiLink + inputData.dataId + "/" + inputData.dataModule + "/" + inputData.dataVersion + "/settings");
+  const { error, response, isRequesting, axiosRequest } = useAxiosFunction<IAppData, null>();
 
   const [proceed, setProceed] = useState<boolean>(false);
 
   useEffect(() => {
-    if (data) {
+    axiosRequest(inputData.dataApiLink + inputData.dataId + "/" + inputData.dataModule + "/" + inputData.dataVersion + "/settings", "get");
+  }, [axiosRequest, inputData]);
+
+  useEffect(() => {
+    if (response) {
       //initialize loaded data
       setProceed(true);
     }
     if (error) {
       console.log(error);
     }
-  }, [data, error, inputData]);
+  }, [response, error, inputData]);
 
   return (
     <Fragment>
-      {proceed && data && <AppDataLoader inputData={inputData} appData={data} />}
-      {isLoading &&
+      {proceed && response && <AppDataLoader inputData={inputData} appData={response} />}
+      {isRequesting &&
         <Grid container p={1}>
           <Grid item xs textAlign='center'>
             <LinearProgress sx={{
@@ -44,7 +48,7 @@ export default function AppSettingsLoader({ inputData }: IAppProps) {
         error &&
         <Alert variant="standard" color="error">
           <AlertTitle>{error.code}</AlertTitle>
-          <Typography variant="body1">{error.codeText}</Typography>
+          <Typography variant="body1">{error.message}</Typography>
           <Typography variant="subtitle1">{error.url}</Typography>
         </Alert>
       }

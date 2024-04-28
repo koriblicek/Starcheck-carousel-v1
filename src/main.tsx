@@ -18,8 +18,6 @@ function getCurrentScript() {
 }
 const currentScript = getCurrentScript();
 
-console.log(currentScript);
-
 if (currentScript) {
   const dal = "https://www.starcheck.sk/apijs/";
   const di = currentScript.getAttribute("data-id");
@@ -40,7 +38,7 @@ if (currentScript) {
       // </Provider>
     );
   } else {
-    errorMessage = `Some of required input data are missing! 'data-id'='${di}','data-module'='${dm}','data-version'='${dv}','data-ui-template'='${dd}'`;
+    errorMessage = `Some of required input data are missing! 'data-id'='${di}','data-module'='${dm}','data-version'='${dv}','data-divs'='${dd}'`;
     console.error(`(Starcheck-carousel): ${errorMessage}`);
   }
 }
