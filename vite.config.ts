@@ -14,6 +14,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
+        format: "iife",
         dir: './dist/',
         entryFileNames: 'carousel_api_v1.js',
         manualChunks: undefined,

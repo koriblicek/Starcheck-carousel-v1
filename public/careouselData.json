@@ -7,7 +7,7 @@
             "navButtonsVisible": true,
             "animation": "fade",
             "duration": 500,
-            "interval": 9000,
+            "interval": 3000,
             "data": [
                 {
                     "type": "text",
@@ -238,7 +238,7 @@
             "navButtonsVisible": false,
             "animation": "slide",
             "duration": 600,
-            "interval": 7000,
+            "interval": 2000,
             "data": [
                 {
                     "type": "text",

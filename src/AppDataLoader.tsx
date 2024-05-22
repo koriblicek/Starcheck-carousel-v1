@@ -4,7 +4,7 @@ import { Fragment, useEffect, useState } from "react";
 import { createPortal } from 'react-dom';
 import App from "./App";
 import useAxiosFunction from "./hooks/useAxiosFunction";
-//import AppNukeCarousel from "./AppNukeCarousel";
+import isDev from "./utils";
 
 interface IAppImagesLoaderProps {
   inputData: IAppInputData;
@@ -16,8 +16,10 @@ export default function AppDataLoader({ inputData, appData }: IAppImagesLoaderPr
   const { error, response, isRequesting, axiosRequest } = useAxiosFunction<ICarouselsData, null>();
 
   useEffect(() => {
-    axiosRequest(appData.dataURL, "get");
-    //axiosRequest("careouselData.json", "get");
+    if (isDev())
+      axiosRequest("careouselData.json", "get");
+    else
+      axiosRequest(appData.dataURL, "get");
   }, [axiosRequest, appData]);
 
   const [proceed, setProceed] = useState<boolean>(false);
@@ -42,7 +44,6 @@ export default function AppDataLoader({ inputData, appData }: IAppImagesLoaderPr
               const target = document.getElementById(inputData.dataDivs[index]);
               if (target) {
                 return createPortal(<App key={index} carouselData={carousel} index={index} />, target);
-                //return createPortal(<AppNukeCarousel key={index} carouselData={carousel} index={index} />, target);
               }
             })
           }
